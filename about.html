@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Maharashtra Nature Park Nursery</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #4a7c59;
+            --secondary: #8fb996;
+            --accent: #f9a826;
+            --light: #f8f9fa;
+            --dark: #2c3e50;
+            --text: #333;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            color: var(--text);
+            line-height: 1.6;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo img {
+            height: 50px;
+            margin-right: 10px;
+        }
+        
+        .logo h1 {
+            color: var(--primary);
+            font-size: 1.8rem;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 25px;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        nav ul li a:hover {
+            color: var(--primary);
+        }
+      
+        .cart-count {
+    background-color: var(--accent);
+    color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    position: absolute;
+    top: -8px;
+    right: -8px;
+}
+        
+        /* Page Header */
+        .page-header {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1697946979172-fbeb94bf57b0?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bmF0dXJlJTIwcGFya3xlbnwwfHwwfHx8MA%3D%3D');
+;
+            color: white;
+            background-size: cover;
+            background-position: center;
+            padding: 80px 0;
+            text-align: center;
+
+        }
+        
+        .page-header h1 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+        }
+        
+        .breadcrumb {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+        }
+        
+        .breadcrumb li {
+            margin: 0 10px;
+        }
+        
+        .breadcrumb li a {
+            color: var(--light);
+            text-decoration: none;
+        }
+        
+        .breadcrumb li::after {
+            content: '/';
+            margin-left: 20px;
+            color: var(--light);
+        }
+        
+        .breadcrumb li:last-child::after {
+            content: '';
+        }
+        
+        /* About Intro */
+        .about-intro {
+            padding: 80px 0;
+            background-color: white;
+        }
+        
+        .intro-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+        
+        .intro-image {
+            border-radius: 10px;
+            overflow: hidden;
+            height: 400px;
+            background: url('https://res.cloudinary.com/dyiffrkzh/image/upload/v1693204562/bbj/qz8mosi8ewv3nd3dx42j.jpg') center/cover;
+        }
+        
+        .intro-text h2 {
+            color: var(--primary);
+            margin-bottom: 20px;
+            font-size: 2.2rem;
+        }
+        
+        .intro-text p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        /* Mission Section */
+        .mission {
+            padding: 80px 0;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1416879595882-3373a0480b5b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-attachment: fixed;
+            color: white;
+            text-align: center;
+        }
+        
+        .mission h2 {
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+        }
+        
+        .mission-content {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.2rem;
+            line-height: 1.8;
+        }
+        
+        /* Features Section */
+        .features {
+            padding: 80px 0;
+            background-color: white;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .section-title h2 {
+            color: var(--primary);
+            font-size: 2.2rem;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+        
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--accent);
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+        
+        .feature-card {
+            text-align: center;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            background-color: var(--secondary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 2rem;
+        }
+        
+        .feature-card h3 {
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+        
+        /* Nursery Info */
+        .nursery-info {
+            padding: 80px 0;
+            background-color: #f9f9f9;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .info-card {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .info-card h3 {
+            color: var(--primary);
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--accent);
+        }
+        
+        .info-list {
+            list-style: none;
+        }
+        
+        .info-list li {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: flex-start;
+        }
+        
+        .info-list li i {
+            color: var(--primary);
+            margin-right: 10px;
+            margin-top: 5px;
+        }
+        
+                /* Call to Action */
+        .cta {
+            padding: 80px 0;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            color: white;
+            text-align: center;
+        }
+        
+        .cta h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+        }
+        
+        .cta p {
+            max-width: 700px;
+            margin: 0 auto 40px;
+            font-size: 1.2rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--accent);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s;
+            font-size: 1.1rem;
+        }
+        
+        .btn:hover {
+            background-color: #e59400;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #004225;
+            color: white;
+            padding: 60px 0 20px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-column h3 {
+            color: var(--accent);
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+        }
+        
+        .footer-column p, .footer-column li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column ul li a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-column ul li a:hover {
+            color: var(--accent);
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 15px;
+        }
+        
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: white;
+            transition: background-color 0.3s;
+        }
+        
+        .social-links a:hover {
+            background-color: var(--accent);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+            color: #ccc;
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            nav ul {
+                margin-top: 20px;
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            nav ul li {
+                margin: 10px 0;
+            }
+            
+            .intro-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .intro-image {
+                height: 300px;
+            }
+            
+            .page-header h1 {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-leaf" style="font-size: 2rem; color: var(--primary);"></i>
+                    <h1>Nature Park Nursery</h1>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="about.html" style="color: var(--primary); font-weight: bold;">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                         <li><a href="#" id="logout-link">Logout</a></li>
+                        <li>
+                             <a href="cart.html" style="position: relative;">
+                             <i class="fas fa-shopping-cart"></i>
+                             <span class="cart-count" id="cart-count">0</span>
+                             </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>About Maharashtra Nature Park</h1>
+            <ul class="breadcrumb">
+                <li><a href="index.html">Home</a></li>
+                <li>About Us</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- About Intro -->
+    <section class="about-intro">
+        <div class="container">
+            <div class="intro-content">
+                <div class="intro-image"></div>
+                <div class="intro-text">
+                    <h2>Welcome to Our Green Oasis</h2>
+                    <p>Maharashtra Nature Park Nursery is a heaven for plant lovers and gardening enthusiasts. Located in the heart of Mumbai, we are dedicated to promoting biodiversity and environmental awareness through the cultivation and distribution of a wide variety of plants.</p>
+                    <p>Our nursery provides quality plants at affordable prices to encourage gardening and green spaces in urban environments. With hundreds of species ranging from medicinal herbs to ornamental plants, flowering varieties to fruit trees, we have something for every gardener.</p>
+                    <p>Whether you're an experienced gardener or just starting your green journey, our knowledgeable staff is here to help you select the perfect plants for your space and provide expert advice on plant care.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="mission">
+        <div class="container">
+            <h2>Our Mission</h2>
+            <div class="mission-content">
+                <p>To create a greener, healthier urban environment by making plants accessible to everyone. We believe that connecting with nature is essential for well-being, and we're committed to helping people bring more greenery into their lives.</p>
+                <p>Through sustainable practices, education, and community engagement, we aim to foster a culture of environmental stewardship and appreciation for the natural world.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <!-- Features Section -->
+<section class="features">
+    <div class="container">
+        <div class="section-title">
+            <h2>Why Choose Us</h2>
+        </div>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-seedling"></i>
+                </div>
+                <h3>Wide Variety</h3>
+                <p>Hundreds of plant species including medicinal, ornamental, flowering plants, and trees</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-rupee-sign"></i>
+                </div>
+                <h3>Affordable Prices</h3>
+                <p>Quality plants at reasonable prices, starting at just ₹20</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-leaf"></i>
+                </div>
+                <h3>Expert Advice</h3>
+                <p>Knowledgeable staff to help you select and care for your plants</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-recycle"></i>
+                </div>
+                <h3>Sustainable Practices</h3>
+                <p>Environmentally friendly growing methods and vermicompost available</p>
+            </div>
+            <!-- New Feature 1 -->
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-truck"></i>
+                </div>
+                <h3>Home Delivery</h3>
+                <p>Get your favorite plants delivered safely to your doorstep</p>
+            </div>
+            <!-- New Feature 2 -->
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-gift"></i>
+                </div>
+                <h3>Customized Gifting</h3>
+                <p>Personalized plant gifts for birthdays, events, and special occasions</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Nursery Information -->
+    <section class="nursery-info">
+        <div class="container">
+            <div class="section-title">
+                <h2>Nursery Information</h2>
+            </div>
+            <div class="info-grid">
+                <div class="info-card">
+                    <h3>Opening Hours</h3>
+                    <ul class="info-list">
+                        <li><i class="fas fa-clock"></i> <strong>Monday to Saturday:</strong> 8:30 AM to 3:30 PM</li>
+                        <li><i class="fas fa-calendar-times"></i> <strong>Closed on:</strong> 26th January, 1st May, 15th August, 2nd October</li>
+                    </ul>
+                </div>
+                <div class="info-card">
+                    <h3>Contact Information</h3>
+                    <ul class="info-list">
+                        <li><i class="fas fa-phone"></i> <strong>Phone:</strong> +91 98190 26308</li>
+                        <li><i class="fas fa-envelope"></i> <strong>Email:</strong> info@natureparknursery.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> <strong>Address:</strong> Maharashtra Nature Park, Mumbai</li>
+                    </ul>
+                </div>
+                <div class="info-card">
+                    <h3>Important Notes</h3>
+                    <ul class="info-list">
+                        <li><i class="fas fa-shopping-bag"></i> Please bring your own carry bags</li>
+                        <li><i class="fas fa-tree"></i> Plant rates may vary based on polybag size</li>
+                        <li><i class="fas fa-recycle"></i> Vermicompost available for ₹30 per kg</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+ 
+
+    <!-- Call to Action -->
+    <section class="cta">
+        <div class="container">
+            <h2>Ready to Start Your Gardening Journey?</h2>
+            <p>Visit our nursery today or browse our online shop to find the perfect plants for your home or garden.</p>
+            <a href="shop.html" class="btn">Explore Our Plants</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Nature Park Nursery</h3>
+                    <p>Bringing nature closer to you. Quality plants at affordable prices.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Info</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Maharashtra Nature Park, Mumbai</li>
+                        <li><i class="fas fa-phone"></i> +91 98190 26308</li>
+                        <li><i class="fas fa-envelope"></i> info@natureparknursery.com</li>
+                        <li><i class="fas fa-clock"></i> Open: 8:30 AM - 3:30 PM</li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to our newsletter for updates on new plants and offers.</p>
+                    <form>
+                        <input type="email" placeholder="Enter your email" style="padding: 10px; width: 100%; margin-bottom: 10px; border-radius: 5px; border: none;">
+                        <button type="submit" class="btn" style="width: 100%;">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 Maharashtra Nature Park Nursery. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>
