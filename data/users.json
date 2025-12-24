@@ -46,5 +46,21 @@
     "password": "$2a$10$vPnr/RHjsKnqMrSR7UpKC.WS8R3pZafXxWzGTJ3AUGRAQjLaD7q..",
     "isAdmin": false,
     "orders": []
+  },
+  {
+    "id": "00a402fb-a63e-491d-905c-e8e87fd94f16",
+    "name": "Asif",
+    "email": "asif@gmail.com",
+    "password": "$2a$10$FVeJ4dbUaem03IZOaPrCCOe/uFLvRycOyPKcZds9eQrH795bO7DzG",
+    "isAdmin": false,
+    "orders": []
+  },
+  {
+    "id": "b5955d0b-f451-4192-9e8a-a38c5392e988",
+    "name": "Farheen",
+    "email": "farheen123@gmail.com",
+    "password": "$2a$10$I394kvWF89eR0JG9qqrB/uzPTC3kucPKMmAnNeD3PDCF5RXNC4k4m",
+    "isAdmin": false,
+    "orders": []
   }
 ]
